@@ -3,6 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useGlobalContext } from "../context/Context";
 import { toast } from "react-toastify";
+import "../styles/chatStyle.css"
 
 
 const cloudinaryUrl = import.meta.env.VITE_CLOUDINARY_URL;
@@ -172,7 +173,7 @@ const SignUp = () => {
   };
   return (
     <>
-      <form className="p-4" onSubmit={handleSubmit}>
+      <form className=" signup p-4" onSubmit={handleSubmit}>
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">
             Name

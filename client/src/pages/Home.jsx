@@ -3,6 +3,7 @@ import Login from "./Login";
 import SignUp from "./SignUp";
 import { useGlobalContext } from "../context/Context";
 import { useNavigate } from "react-router-dom";
+import "../styles/chatStyle.css"
 
 const Home = () => {
   const navigate = useNavigate();
