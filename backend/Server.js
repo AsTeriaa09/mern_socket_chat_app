@@ -9,7 +9,7 @@ const errorMiddleware = require("./middlewares/ErrorMiddleware");
 const MessageRoute = require("./Routes/MessageRouter");
 
 const corsOption = {
-  origin: "http://localhost:5173",
+  origin:  process.env.FRONTEND_URL || "http://localhost:5173",
   methods: "POST,GET,DELETE,PATCH,PUT,HEAD",
   credentials: true,
   allowedHeaders: "Content-Type,Authorization",
