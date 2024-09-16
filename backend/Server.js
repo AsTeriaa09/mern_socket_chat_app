@@ -8,8 +8,10 @@ const connectToDb = require("./db");
 const errorMiddleware = require("./middlewares/ErrorMiddleware");
 const MessageRoute = require("./Routes/MessageRouter");
 
+const allowedOrigins = ['https://mern-socket-app.netlify.app'];
+
 const corsOption = {
-  origin: "https://mern-socket-app.netlify.app/" || "http://localhost:5173",
+  origin: "https://mern-socket-app.netlify.app/",
   methods: "POST,GET,DELETE,PATCH,PUT,HEAD",
   credentials: true,
   allowedHeaders: "Content-Type,Authorization",
