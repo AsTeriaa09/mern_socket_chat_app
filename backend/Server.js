@@ -49,7 +49,7 @@ const server = connectToDb().then(() => {
   const io = require("socket.io")(serverInstance, {
     pingTimeout: 60000,
     cors: {
-      origin: "http://localhost:5173",
+      origin:  "https://mern-socket-app.netlify.app",
     },
   });
 
