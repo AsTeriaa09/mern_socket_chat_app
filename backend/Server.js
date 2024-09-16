@@ -11,13 +11,20 @@ const MessageRoute = require("./Routes/MessageRouter");
 const allowedOrigins = ['https://mern-socket-app.netlify.app'];
 
 const corsOption = {
-  origin: "https://mern-socket-app.netlify.app/",
+  // origin: "https://mern-socket-app.netlify.app/",
+  origin: function (origin, callback) {
+    if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
   methods: "POST,GET,DELETE,PATCH,PUT,HEAD",
   credentials: true,
   allowedHeaders: "Content-Type,Authorization",
 };
 
-app.use(cors(corsOption));
+app.use("*",cors(corsOption));
 
 app.use(express.json());
 
