@@ -20,9 +20,4 @@ ChatterBox is a real-time one-on-one and group chat application designed to prov
 - **Authentication**: JWT
 - **Cloud Storage**: Cloudinary
 
-## Installation Instructions
 
-1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/yourusername/chatterbox.git
-   cd chatterbox
