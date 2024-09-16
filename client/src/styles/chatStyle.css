@@ -1,0 +1,31 @@
+.chat-box-width {
+  width: 68%;
+}
+
+.my-chat-width{
+  width: 31%;
+}
+
+.arrow-button{
+  background: none !important;
+  border: none ;
+  font-size: 22px;
+}
+
+
+
+@media (max-width: 767px) { /* lg breakpoint */
+  .chat-box-width  {
+    width: 100%;
+  }
+  .search-button p{
+display: none;
+  }
+  .notif-button{
+    font-size: 20px;
+  }
+  
+.my-chat-width{
+  width: 100%;
+}
+}
