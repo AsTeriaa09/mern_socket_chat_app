@@ -39,7 +39,7 @@ const CreateGroupModal = () => {
       );
       if (response.status === 200) {
         setLoading(false);
-        console.log("searched users", response.data);
+        //console.log("searched users", response.data);
         setSearchResult(response.data);
       }
     } catch (error) {

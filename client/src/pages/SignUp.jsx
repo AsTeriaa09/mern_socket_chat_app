@@ -42,7 +42,7 @@ const SignUp = () => {
       });
       return;
     }
-    console.log(pictureFile);
+    //console.log(pictureFile);
     if (pictureFile.type === "image/jpeg" || pictureFile.type === "image/png") {
       const data = new FormData();
       data.append("file", pictureFile);
@@ -55,7 +55,7 @@ const SignUp = () => {
           data
         );
         setPicture(res.data.secure_url);
-        console.log("Cloudinary response:", res.data);
+        //console.log("Cloudinary response:", res.data);
         setLoadingImage(false);
       } catch (err) {
         console.error("Error uploading image:", err);
@@ -104,7 +104,7 @@ const SignUp = () => {
       });
       return;
     }
-    console.log("SignUp data before sending:", signUp);
+    //console.log("SignUp data before sending:", signUp);
     try {
       const response = await axios.post(
         signUpurl,
@@ -114,7 +114,7 @@ const SignUp = () => {
         }
       );
       // const res_data = await response.json();
-      console.log("Response data:", response.data);
+      //console.log("Response data:", response.data);
       if (response.status === 200) {
         storeTokenInLocal(response.data.token);
         setSignUp(signUpInfo);
