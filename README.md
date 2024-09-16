@@ -13,7 +13,7 @@ ChatterBox is a real-time one-on-one and group chat application designed to prov
 
 ## Technologies Used
 
-- **Frontend**: React, Vite
+- **Frontend**: React, Vite, Axios, Bootstrap
 - **Backend**: Node.js, Express
 - **Database**: MongoDB
 - **Real-Time Communication**: Socket.IO
