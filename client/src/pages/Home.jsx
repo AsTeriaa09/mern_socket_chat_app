@@ -19,7 +19,7 @@ const Home = () => {
     <>
       <div className="container text-center">
         <div className="home-header">
-          <h2>Talk-A-Tive</h2>
+          <h2>ChatterBox</h2>
         </div>
         <div className="home-body mb-5">
           <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
