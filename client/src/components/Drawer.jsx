@@ -39,7 +39,7 @@ const Drawer = () => {
     try {
       setLoading(true);
       const response = await axios.get(
-        `https://mern-socket-chat-app.onrender.com/auth/user?search=${search}`,
+        `https://mern-socket-chat-app.onrender.com/api/auth/user?search=${search}`,
 
         {
           headers: { Authorization: `Bearer ${token}` },
@@ -82,7 +82,9 @@ const Drawer = () => {
         //console.log(response.data);
         setSelectedChat(response.data);
         setLoading(false);
-        const closeButton = document.querySelector('[data-bs-dismiss="offcanvas"]');
+        const closeButton = document.querySelector(
+          '[data-bs-dismiss="offcanvas"]'
+        );
         if (closeButton) {
           closeButton.click(); // Trigger the close button click
         }
@@ -164,7 +166,6 @@ const Drawer = () => {
                           }}
                         />
                         <span>{name}</span>
-                       
                       </li>
                     );
                   })}
