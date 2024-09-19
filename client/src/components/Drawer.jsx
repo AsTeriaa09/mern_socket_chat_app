@@ -39,7 +39,7 @@ const Drawer = () => {
     try {
       setLoading(true);
       const response = await axios.get(
-        `http://localhost:3000/api/auth/user?search=${search}`,
+        `https://mern-socket-chat-app.onrender.com/auth/user?search=${search}`,
 
         {
           headers: { Authorization: `Bearer ${token}` },

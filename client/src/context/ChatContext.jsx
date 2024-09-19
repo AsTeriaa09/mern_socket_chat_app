@@ -4,8 +4,7 @@ import { useGlobalContext } from "./Context";
 
 const ChatContext = React.createContext();
 
-// const userURI = process.env.REACT_APP_LOGGED_USER_URI;
-const userURI = "http://localhost:3000/api/auth/loggeduser";
+const userURL = import.meta.env.VITE_LOGGEDUSER_URL;
 
 const ChatProvider = ({ children }) => {
   const { token } = useGlobalContext();
@@ -22,7 +21,7 @@ const ChatProvider = ({ children }) => {
   //  to get logged in user info
   const UserAuthentication = async () => {
     try {
-      const response = await axios.get(userURI, {
+      const response = await axios.get(userURL, {
         headers: { Authorization: `Bearer ${token}` },
       });
       if (response.status === 200) {

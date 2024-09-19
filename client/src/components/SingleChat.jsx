@@ -18,7 +18,7 @@ import "../styles/chatstyle.css";
 
 const sendMsgUri = import.meta.env.VITE_SENDMSG_URL;
 
-const ENDPOINT = "http://localhost:3000";
+const ENDPOINT = "https://mern-socket-chat-app.onrender.com/";
 let socket, selectedChatCompare;
 
 const SingleChat = () => {
@@ -147,7 +147,7 @@ const SingleChat = () => {
     try {
       setLoading(true);
       const response = await axios.get(
-        `http://localhost:3000/api/messsage/fetchmsg/${selectedChat._id}`,
+        `https://mern-socket-chat-app.onrender.com/api/messsage/fetchmsg/${selectedChat._id}`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }
